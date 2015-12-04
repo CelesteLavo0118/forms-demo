@@ -2,14 +2,57 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>forms demo</title>
   <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-  <form>
+
+  <form action="https://formspree.io/celeste.lavoie@gmail.com" method="post">
+
     <div>
-      <label>Name</label>
-      <input>
+      <label for="name">Name</label>
+      <input id="name" required placeholder="John Doe" name="name">
     </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required placeholder="you@example.com">
+    </div>
+
+    <div>
+      <label for="subject" >Subject</label>
+      <select id="subject" name="_subject">
+        <option>I am an artist</option>
+        <option>I am a singer</option>
+        <option>I am an author</option>
+        <option>All the above</option>
+      </select>
+    </div>
+
+    <fieldset>
+      <legend>How are you feeling?</legend>
+
+      <input id="happy" type="radio" name="feels">
+      <label for="happy">Happy</label>
+
+      <input id="tired" type="radio" name="feels">
+      <label for="tired">Tired</label>
+
+      <input id="sad" type="radio" name="feels">
+      <label for="sad">Sad</label>
+
+      <input id="super" type="radio" name="feels">
+      <label for="super">Fantastic!</label>
+    </fieldset>
+
+    <div>
+      <label for="message">Meassage</label>
+      <textarea id="message" name="message"></textarea>
+    </div>
+
+    <div>
+      <button type="submit">Send!</button>
+    </div>
+
   </form>
 </body>
